@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subtitle Generator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>Upload an Audio File</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="audio_file" required />
+    <button type="submit">Transcribe</button>
+  </form>
+
+  {% if transcription %}
+    <h2>Transcription:</h2>
+    <p>{{ transcription }}</p>
+  {% endif %}
+</body>
+</html>
